@@ -12,7 +12,7 @@
 
 .header {
     border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 25px;
+    padding: 15px 0 25px;
 }
 
 .header .container-n {
@@ -30,6 +30,20 @@
 .header .container-n .menu {
     font-size: 20px;
     font-weight: 600;
+}
+
+.header .container-n .menu .ikon1,
+.header .container-n .menu:focus .ikon2 {
+    display: none;
+}
+
+.header .container-n .menu:focus .ikon1,
+.header .container-n .menu .ikon2 {
+    display: inline-block;
+}
+
+.header .container-n .menu:focus .ikon2 {
+    display: none;
 }
 
 .header .container-n .menu span {
@@ -723,6 +737,7 @@
     line-height: 0.5;
     color: #666;
     font-size: 15px;
+    width: 100%;
 }
 
 .footer .contact .ikon,
@@ -755,9 +770,62 @@
     font-weight: 300;
 }
 
+@media screen and (max-width: 1200px) {
+    .information .container .row-r .col .item.item-none p {
+        font-size: 22px;
+    }
+}
 
-/* @media screen and (max-width: 1200px) {}
+@media screen and (max-width: 992px) {
+    .information .container .row-r {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
-@media screen and (max-width: 992px) {}
-
-@media screen and (max-width: 576px) {} */
+@media screen and (max-width: 576px) {
+    .alert-bar .container-n .check-box1,
+    .alert-bar .container-n .check-box2,
+    .alert-bar .container-n .box1 .logo-left span,
+    .alert-bar .container-n .box2 {
+        display: none;
+    }
+    .alert-bar .container-n .box1 {
+        display: flex;
+    }
+    .alert-bar .container-n .box1 .logo-left {
+        width: 100px;
+    }
+    .alert-bar .container-n .box1 .logo-center {
+        padding: 0;
+        margin: 0;
+    }
+    .alert-bar .container-n .box1 .logo-end {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+    .blog .list {
+        display: flex;
+        flex-direction: column;
+    }
+    .portfolio .row-p {
+        display: flex;
+        flex-direction: column;
+    }
+    .portfolio .row-p .col {
+        width: 100%;
+        height: 100%;
+    }
+    .information .container .row-r {
+        grid-template-columns: 1fr;
+    }
+    .footer .header .row-f {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer .contact {
+        line-height: 1;
+        text-align: center;
+    }
+}
